@@ -1,0 +1,11 @@
+package com.example.endterm.model;
+
+public class FoodItem extends MenuItem {
+    public FoodItem(String name, double price) {
+        super(name, price);
+    }
+
+    public String getType() {
+        return "FOOD";
+    }
+}
