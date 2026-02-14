@@ -105,3 +105,22 @@ Conclusion
 
 This project demonstrates a complete backend system using Spring Boot, REST APIs, and PostgreSQL.
 It follows good software design practices and meets all requirements of the endterm project.
+
+Bonus Task – In-Memory Cache
+
+A simple in-memory caching layer was implemented using the Singleton pattern.
+
+The CacheManager class ensures that only one cache instance exists in the application.
+The cache uses ConcurrentHashMap to store frequently requested data.
+
+The cache is applied in the Service layer for the getAll() method.
+
+Flow:
+
+First request → data is loaded from database
+
+Next requests → data is returned from cache
+
+After create/update/delete → cache is cleared automatically
+
+This improves performance by reducing unnecessary database calls while preserving the layered architecture.
